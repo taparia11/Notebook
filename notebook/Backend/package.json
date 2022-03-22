@@ -1,0 +1,15 @@
+{
+  "name": "notebook-backend",
+  "version": "1.0.0",
+  "description": "notebook backend files here",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "NIKHIL TAPARIA",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "mongoose": "^6.2.7"
+  }
+}
