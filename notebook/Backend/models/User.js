@@ -1,5 +1,5 @@
-import mongoose from 'mongoose';
-
+const mongoose = require('mongoose');
+const { Schema } = mongoose;
 
 const UserSchema = new Schema({
 name:{
@@ -25,4 +25,4 @@ date:{
 
 });
 
-module.exports = mongoose.mode('user', UserSchema)
+module.exports = mongoose.model('user', UserSchema)
