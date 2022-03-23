@@ -9,8 +9,7 @@ name:{
 
 email:{
     type: String,
-    required: true,
-    unique: true
+    required: true
 },
 
 password:{

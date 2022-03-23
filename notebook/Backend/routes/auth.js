@@ -18,6 +18,7 @@ router.post('/createuser',[
         return res.status(400).json({errors:errors.array()});
     }
 //  check whether the user with this email exists already
+try{
     let user = await User.findOne({email:req.body.email});
     if (user) {
         return res.status(400).json({error: "Sorry a user with this email already exists"})
@@ -35,6 +36,11 @@ router.post('/createuser',[
     // const user = User(req.body);
     // user.save()
     // res.send(req.body)
+    // res.json({"Status" : "Account created in DB Successfully"})
+} catch(error){
+    console.error(error.message);
+    res.status(500).send("Some error occured");
+}
 })
 
 module.exports = router
