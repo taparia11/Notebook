@@ -49,7 +49,7 @@ const Addnote = () => {
         <button type="submit" className="btn btn-primary" onClick={handleClick}>
           Add Note
         </button>
-      </form>n
+      </form>
     </div>
   );
 };
