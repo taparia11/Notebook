@@ -7,7 +7,7 @@ import {
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import About from './components/About'
-import NoteState from "./components/context/notes/NoteState";
+import NoteState from "./context/notes/NoteState";
 
 
 function App() {
