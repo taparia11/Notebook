@@ -48,60 +48,34 @@ export const Notes = () => {
                             <div className='container'>
                                 <form>
                                     <div className="mb-3">
-                                        <label htmlFor="title" className="form-label">
-                                            Title
-                                        </label>
-                                        <input
-                                            type="email"
-                                            className="form-control"
-                                            id="etitle"
-                                            name="etitle"
-                                            aria-describedby="emailHelp"
-                                            value={note.etitle}
-                                            onChange={onChange}
-                                        />
+                                        <label htmlFor="title" className="form-label"> Title </label>
+                                        <input type="email" className="form-control" id="etitle" name="etitle" aria-describedby="emailHelp" value={note.etitle} onChange={onChange} />
                                     </div>
                                     <div className="mb-3">
-                                        <label htmlFor="description" className="form-label">
-                                            Description
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="edescription"
-                                            name="edescription"
-                                            value={note.edescription}
-                                            onChange={onChange}
-                                        />
+                                        <label htmlFor="description" className="form-label"> Description </label>
+                                        <input type="text" className="form-control" id="edescription" name="edescription" value={note.edescription} onChange={onChange} />
                                     </div>
-
                                     <div className="mb-3">
-                                        <label htmlFor="tag" className="form-label">
-                                            Tag
-                                        </label>
-                                        <input
-                                            type="text"
-                                            className="form-control"
-                                            id="etag"
-                                            name="etag"
-                                            value={note.etag}
-                                            onChange={onChange}
-                                        />
+                                        <label htmlFor="tag" className="form-label"> Tag </label>
+                                        <input type="text" className="form-control" id="etag" name="etag" value={note.etag} onChange={onChange} />
                                     </div>
                                 </form>
                             </div>
                         </div>
                         <div className="modal-footer">
-                            <button ref={refclose} type="button" className="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button ref={refclose} type="button" className="btn btn-danger" data-bs-dismiss="modal">Close</button>
                             <button type="button" className="btn btn-primary" onClick={handleClick}>Update Note</button>
                         </div>
                     </div>
                 </div>
             </div>
+            <div className="container my-5">
             <div className="row my-3">
+                {notes.length===0 && "No Notes to Display"}
                 {notes.map((note) => {
                     return <Noteitem key={note._id} updateNote={updateNote} note={note} />;
                 })}
+            </div>
             </div>
         </>
     );
